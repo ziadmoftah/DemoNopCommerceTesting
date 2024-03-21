@@ -27,12 +27,18 @@ public class UserRegistrationPage extends BasePage{
     @FindBy(id = "register-button")
     WebElement registerBtn ;
 
+    @FindBy(className = "result")
+    WebElement successMessage ;
+
     public void userRegistration(String firstName , String lastName , String email , String password ){
-        firstNameTextBox.sendKeys(firstName);
-        lastNameTextBox.sendKeys(lastName);
-        emailTextBox.sendKeys(email);
-        passwordTextBox.sendKeys(password);
-        confirmPasswordTextBox.sendKeys(password);
-        registerBtn.click();
+        enterTextInTextField(firstNameTextBox,firstName);
+        enterTextInTextField(lastNameTextBox,lastName);
+        enterTextInTextField(emailTextBox,email);
+        enterTextInTextField(passwordTextBox , password);
+        enterTextInTextField(confirmPasswordTextBox,password);
+        clickOnBtn(registerBtn);
+    }
+    public boolean isUserRegisteredSuccessfully(){
+        return successMessage.getText().equals("Your registration completed") ;
     }
 }

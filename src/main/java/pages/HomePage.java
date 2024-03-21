@@ -14,6 +14,6 @@ public class HomePage extends BasePage{
     WebElement registerLink ;
 
     public void openRegistrationPage(){
-        registerLink.click();
+        clickOnBtn(registerLink);
     }
 }

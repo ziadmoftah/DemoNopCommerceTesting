@@ -36,7 +36,7 @@ public class UserRegistrationPage extends BasePage{
         enterTextInTextField(emailTextBox,email);
         enterTextInTextField(passwordTextBox , password);
         enterTextInTextField(confirmPasswordTextBox,password);
-        clickOnBtn(registerBtn);
+        clickOnButton(registerBtn);
     }
     public boolean isUserRegisteredSuccessfully(){
         return successMessage.getText().equals("Your registration completed") ;

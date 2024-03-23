@@ -12,7 +12,7 @@ public class BasePage {
         PageFactory.initElements(driver , this);
     }
 
-    protected static void clickOnBtn(WebElement btn){
+    protected static void clickOnButton(WebElement btn){
         btn.click();
     }
 

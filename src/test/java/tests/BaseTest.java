@@ -6,7 +6,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.testng.ITestResult;
 import org.testng.annotations.*;
+import utilities.Helper;
 
 import java.util.concurrent.TimeUnit;
 
@@ -43,5 +45,16 @@ public class BaseTest {
     public void stopDriver(){
         driver.quit();
     }
+
+    // take screenshot when test fails and add it in the screenshot folder
+    @AfterMethod
+    public void takeScreenShotOnFailure(ITestResult result){
+        if (  result.getStatus() == ITestResult.FAILURE){
+            System.out.println("Failed!");
+            System.out.println("Taking Screenshot....");
+            Helper.captureScreenShot(driver, result.getName());
+        }
+    }
+
 
 }

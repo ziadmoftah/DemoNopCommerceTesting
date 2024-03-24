@@ -14,9 +14,10 @@ public class HomePage extends BasePage{
     WebElement registerLink ;
     @FindBy (linkText = "Log in")
     WebElement logInLink ;
-
     @FindBy(linkText = "Log out")
     WebElement logOutLink;
+    @FindBy(linkText = "My account")
+    WebElement myAccountLink ;
     public void openRegistrationPage(){
         clickOnButton(registerLink);
     }
@@ -28,6 +29,12 @@ public class HomePage extends BasePage{
     }
     public boolean isUserLoggedIn(){
         return logOutLink.isDisplayed() ;
+    }
+    public void openMyAccountPage(){
+        clickOnButton(myAccountLink);
+    }
+    public boolean isUserLoggedOut(){
+        return registerLink.isDisplayed() ;
     }
 
 }

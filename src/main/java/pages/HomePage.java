@@ -18,6 +18,10 @@ public class HomePage extends BasePage{
     WebElement logOutLink;
     @FindBy(linkText = "My account")
     WebElement myAccountLink ;
+    @FindBy(id = "small-searchterms")
+    WebElement searchTextBox ;
+    @FindBy (css = "button.button-1.search-box-button")
+    WebElement searchButton ;
     public void openRegistrationPage(){
         clickOnButton(registerLink);
     }
@@ -35,6 +39,10 @@ public class HomePage extends BasePage{
     }
     public boolean isUserLoggedOut(){
         return registerLink.isDisplayed() ;
+    }
+    public void searchForProduct(String product){
+        enterTextInTextField(searchTextBox,product);
+        clickOnButton(searchButton);
     }
 
 }

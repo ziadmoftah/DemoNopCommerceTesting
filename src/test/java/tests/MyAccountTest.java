@@ -5,7 +5,6 @@ import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.LogInPage;
 import pages.MyAccountPage;
-import pages.UserRegistrationPage;
 
 public class MyAccountTest extends BaseTest{
     HomePage homePage ;

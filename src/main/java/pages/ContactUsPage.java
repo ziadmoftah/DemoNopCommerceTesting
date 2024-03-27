@@ -3,6 +3,8 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import static utilities.BrowserInteractions.*;
+
 
 public class ContactUsPage extends BasePage{
     public ContactUsPage(WebDriver driver) {
@@ -19,12 +21,20 @@ public class ContactUsPage extends BasePage{
     @FindBy(xpath = "//div[@class = 'result']")
     WebElement successMessage ;
     public void contactUs(String fullName, String email, String enquiry){
-        enterTextInTextField(fullNameTextField , fullName);
-        enterTextInTextField(emailTextField, email);
-        enterTextInTextField(enquiryTextArea , enquiry);
-        clickOnButton(submitButton);
+        waitClearAndEnterTextInTextField(fullNameTextField , wait , fullName);
+        waitClearAndEnterTextInTextField(emailTextField , wait , email);
+        waitClearAndEnterTextInTextField(enquiryTextArea , wait , enquiry);
+        waitAndClickOnWebElement(submitButton , wait);
+
     }
     public boolean isEnquirySuccessfullySent(){
-        return successMessage.getText().equals("Your enquiry has been successfully sent to the store owner.") ;
+        String  message = waitAndGetTextFromWebElement(successMessage , wait) ;
+        if ( message == null){
+            return false ;
+        }
+        if ( message.equals("Your enquiry has been successfully sent to the store owner.")){
+            return true ;
+        }
+        return false ;
     }
 }

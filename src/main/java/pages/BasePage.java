@@ -16,15 +16,6 @@ public class BasePage {
         jse = (JavascriptExecutor) this.driver ;
         wait = new WebDriverWait(driver , 10) ;
     }
-
-    protected static void clickOnButton(WebElement btn){
-        btn.click();
-    }
-
-    protected static void enterTextInTextField(WebElement textField , String text){
-        textField.sendKeys(text);
-    }
-
     protected void scrollToBottom(){
         jse.executeScript("scrollBy(0, 2500)") ;
     }

@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9efc3e7-ef6b-4988-943b-2308c0e82933" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utilities/BrowserInteractions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utilities/BrowserInteractions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/MyAccountPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/MyAccountPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/MyAccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/MyAccountTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,7 +39,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.UserRegistrationTest">
+  <component name="RunManager" selected="TestNG.MyAccountTest">
     <configuration name="ContactUsTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="NopCommerceTesting" />
       <extension name="coverage">
@@ -76,7 +74,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchProductTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="SearchProductTest.userCanSearchForSpecificProduct" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="NopCommerceTesting" />
       <extension name="coverage">
         <pattern>
@@ -86,7 +84,8 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.SearchProductTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="METHOD_NAME" value="userCanSearchForSpecificProduct" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -129,11 +128,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.MyAccountTest" />
+        <item itemvalue="TestNG.SearchProductTest.userCanSearchForSpecificProduct" />
         <item itemvalue="TestNG.UserRegistrationTest" />
         <item itemvalue="TestNG.ContactUsTest" />
-        <item itemvalue="TestNG.MyAccountTest" />
         <item itemvalue="TestNG.SearchProductsByAutoComplete" />
-        <item itemvalue="TestNG.SearchProductTest" />
       </list>
     </recent_temporary>
   </component>
@@ -265,7 +264,14 @@
       <option name="project" value="LOCAL" />
       <updated>1711550058147</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Refactor HomePage using BrowserInteractions class">
+      <created>1711551656328</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1711551656329</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -295,6 +301,7 @@
     <MESSAGE value="Create BrowserInteractions class and refactor ContactUsPage using BrowserInteractions" />
     <MESSAGE value="Refactor LoginPage using BrowserInteractions class" />
     <MESSAGE value="Refactor RegisterPage using BrowserInteractions class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor RegisterPage using BrowserInteractions class" />
+    <MESSAGE value="Refactor HomePage using BrowserInteractions class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor HomePage using BrowserInteractions class" />
   </component>
 </project>

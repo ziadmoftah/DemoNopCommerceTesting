@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import static utilities.BrowserInteractions.*;
 
 public class MyAccountPage extends BasePage{
     public MyAccountPage(WebDriver driver) {
@@ -28,18 +29,22 @@ public class MyAccountPage extends BasePage{
     @FindBy ( xpath = "//div[@id ='bar-notification']//span")
     WebElement notificationBarCloseButton ;
     public void openChangePasswordPage(){
-        clickOnButton(changePasswordLink);
+        waitAndClickOnWebElement(changePasswordLink , wait);
     }
     public void changePassword(String oldPassword, String newPassword){
-        enterTextInTextField(oldPasswordTextBox , oldPassword);
-        enterTextInTextField(newPasswordTextBox , newPassword);
-        enterTextInTextField(confirmNewPasswordTextBox , newPassword);
-        clickOnButton(changePasswordButton);
+        waitClearAndEnterTextInTextField(oldPasswordTextBox , wait , oldPassword);
+        waitClearAndEnterTextInTextField(newPasswordTextBox, wait , newPassword);
+        waitClearAndEnterTextInTextField(confirmNewPasswordTextBox , wait , newPassword);
+        waitAndClickOnWebElement(changePasswordButton , wait);
     }
     public boolean isPasswordChangedSuccessfully(){
-        return notificationBarLabel.getText().equals("Password was changed") ;
+        String message = waitAndGetTextFromWebElement(notificationBarLabel , wait) ;
+        if ( message == null){
+            return false ;
+        }
+        return message.equals("Password was changed");
     }
     public void closeNotificationBarCloseButton(){
-        clickOnButton(notificationBarCloseButton);
+        waitAndClickOnWebElement(notificationBarCloseButton , wait );
     }
 }

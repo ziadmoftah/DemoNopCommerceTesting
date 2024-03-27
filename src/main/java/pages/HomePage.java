@@ -26,6 +26,8 @@ public class HomePage extends BasePage{
     WebElement searchButton ;
     @FindBy(id = "ui-id-1")
     List<WebElement> autoCompleteSearchResults ;
+    @FindBy(xpath = "//a[text() = 'Contact us']")
+    WebElement contactUsLink ;
 
     public void openRegistrationPage(){
         clickOnButton(registerLink);
@@ -57,6 +59,10 @@ public class HomePage extends BasePage{
             System.out.println("Error when clicking from autocompleted list : " + e.getMessage());
         }
         clickOnButton(autoCompleteSearchResults.get(0));
+    }
+    public void openContactUsPage(){
+        scrollToBottom();
+        clickOnButton(contactUsLink);
     }
 
 }

@@ -39,4 +39,14 @@ public class BrowserInteractions {
             return null ;
         }
     }
+    public static boolean waitAndFindIfWebElementIsVisible(WebElement webElement , WebDriverWait wait){
+        try {
+            wait.until(ExpectedConditions.visibilityOf(webElement)) ;
+            return true ;
+        }
+        catch (Exception e ){
+            printException(e ,new Object(){}.getClass().getEnclosingMethod().getName());
+            return false;
+        }
+    }
 }

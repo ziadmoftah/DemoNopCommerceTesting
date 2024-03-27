@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import static utilities.BrowserInteractions.*;
 
 import java.util.List;
 
@@ -30,39 +31,34 @@ public class HomePage extends BasePage{
     WebElement contactUsLink ;
 
     public void openRegistrationPage(){
-        clickOnButton(registerLink);
+        waitAndClickOnWebElement(registerLink , wait);
     }
     public void openLogInPage(){
-        clickOnButton(logInLink);
+        waitAndClickOnWebElement(logInLink, wait);
     }
     public void logOut() {
-        clickOnButton(logOutLink);
+        waitAndClickOnWebElement(logOutLink , wait);
     }
     public boolean isUserLoggedIn(){
-        return logOutLink.isDisplayed() ;
+        return waitAndFindIfWebElementIsVisible(logOutLink , wait) ;
     }
     public void openMyAccountPage(){
-        clickOnButton(myAccountLink);
+        waitAndClickOnWebElement(myAccountLink , wait);
     }
     public boolean isUserLoggedOut(){
-        return registerLink.isDisplayed() ;
+        return waitAndFindIfWebElementIsVisible(registerLink , wait);
     }
     public void searchForProduct(String product){
-        enterTextInTextField(searchTextBox,product);
-        clickOnButton(searchButton);
+        waitClearAndEnterTextInTextField(searchTextBox , wait , product);
+        waitAndClickOnWebElement(searchButton , wait);
     }
     public void selectSearchAutoCompleteResult(String searchText){
-        enterTextInTextField(searchTextBox , searchText);
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            System.out.println("Error when clicking from autocompleted list : " + e.getMessage());
-        }
-        clickOnButton(autoCompleteSearchResults.get(0));
+        waitClearAndEnterTextInTextField(searchTextBox, wait , searchText);
+        waitAndClickOnWebElement(autoCompleteSearchResults.get(0) , wait);
     }
     public void openContactUsPage(){
         scrollToBottom();
-        clickOnButton(contactUsLink);
+        waitAndClickOnWebElement(contactUsLink , wait);
     }
 
 }

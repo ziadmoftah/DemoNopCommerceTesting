@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import static utilities.BrowserInteractions.*;
 
 public class LogInPage extends BasePage{
 
@@ -19,9 +20,9 @@ public class LogInPage extends BasePage{
     WebElement logInBtn ;
 
     public void userLogIn(String email , String password){
-        enterTextInTextField(emailTextBox,email);
-        enterTextInTextField(passwordTextBox,password);
-        clickOnButton(logInBtn);
+        waitClearAndEnterTextInTextField(emailTextBox , wait , email);
+        waitClearAndEnterTextInTextField(passwordTextBox ,wait , password);
+        waitAndClickOnWebElement(logInBtn , wait);
     }
 
 }

@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9efc3e7-ef6b-4988-943b-2308c0e82933" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utilities/BrowserInteractions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/ContactUsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/ContactUsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/LogInPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/LogInPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +40,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.ContactUsTest.userCanSendEnquirySuccessfully">
+  <component name="RunManager" selected="TestNG.UserRegistrationTest">
     <configuration name="ContactUsTest.userCanSendEnquirySuccessfully" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="NopCommerceTesting" />
       <extension name="coverage">
@@ -133,10 +130,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.UserRegistrationTest" />
         <item itemvalue="TestNG.ContactUsTest.userCanSendEnquirySuccessfully" />
         <item itemvalue="TestNG.SearchProductsByAutoComplete" />
         <item itemvalue="TestNG.SearchProductTest" />
-        <item itemvalue="TestNG.UserRegistrationTest" />
         <item itemvalue="TestNG.UserRegistrationTest.userCanRegisterSuccessfully" />
       </list>
     </recent_temporary>
@@ -234,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1711541654716</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Create BrowserInteractions class and refactor ContactUsPage using BrowserInteractions">
+      <created>1711549148453</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1711549148453</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -261,6 +265,7 @@
     <MESSAGE value="Create ProductSearch test and its dependent classes" />
     <MESSAGE value="Create ProductSearchByAutoComplete test and its dependent classes" />
     <MESSAGE value="Create ContactUsTest and its dependent Classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create ContactUsTest and its dependent Classes" />
+    <MESSAGE value="Create BrowserInteractions class and refactor ContactUsPage using BrowserInteractions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create BrowserInteractions class and refactor ContactUsPage using BrowserInteractions" />
   </component>
 </project>

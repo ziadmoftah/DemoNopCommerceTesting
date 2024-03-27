@@ -28,13 +28,10 @@ public class ContactUsPage extends BasePage{
 
     }
     public boolean isEnquirySuccessfullySent(){
-        String  message = waitAndGetTextFromWebElement(successMessage , wait) ;
+        String message = waitAndGetTextFromWebElement(successMessage , wait) ;
         if ( message == null){
             return false ;
         }
-        if ( message.equals("Your enquiry has been successfully sent to the store owner.")){
-            return true ;
-        }
-        return false ;
+        return message.equals("Your enquiry has been successfully sent to the store owner.");
     }
 }

@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import static utilities.BrowserInteractions.*;
 
 public class UserRegistrationPage extends BasePage{
 
@@ -31,14 +32,18 @@ public class UserRegistrationPage extends BasePage{
     WebElement successMessage ;
 
     public void userRegistration(String firstName , String lastName , String email , String password ){
-        enterTextInTextField(firstNameTextBox,firstName);
-        enterTextInTextField(lastNameTextBox,lastName);
-        enterTextInTextField(emailTextBox,email);
-        enterTextInTextField(passwordTextBox , password);
-        enterTextInTextField(confirmPasswordTextBox,password);
-        clickOnButton(registerBtn);
+        waitClearAndEnterTextInTextField(firstNameTextBox , wait , firstName);
+        waitClearAndEnterTextInTextField(lastNameTextBox , wait , lastName);
+        waitClearAndEnterTextInTextField(emailTextBox , wait , email);
+        waitClearAndEnterTextInTextField(passwordTextBox , wait , password);
+        waitClearAndEnterTextInTextField(confirmPasswordTextBox , wait , password);
+        waitAndClickOnWebElement(registerBtn , wait);
     }
     public boolean isUserRegisteredSuccessfully(){
-        return successMessage.getText().equals("Your registration completed") ;
+        String message = waitAndGetTextFromWebElement(successMessage , wait) ;
+        if ( message == null){
+            return false ;
+        }
+        return message.equals("Your registration completed");
     }
 }

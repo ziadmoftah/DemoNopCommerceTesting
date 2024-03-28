@@ -3,6 +3,8 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import utilities.Constants;
+
 import static utilities.BrowserInteractions.*;
 
 import java.util.List;
@@ -29,7 +31,8 @@ public class HomePage extends BasePage{
     List<WebElement> autoCompleteSearchResults ;
     @FindBy(xpath = "//a[text() = 'Contact us']")
     WebElement contactUsLink ;
-
+    @FindBy(id = "customerCurrency")
+    public WebElement currencyDropDownMenu ;
     public void openRegistrationPage(){
         waitAndClickOnWebElement(registerLink , wait , driver);
     }
@@ -58,6 +61,13 @@ public class HomePage extends BasePage{
     }
     public void openContactUsPage(){
         waitAndClickOnWebElement(contactUsLink , wait , driver);
+    }
+
+    public void changeCurrency(Object currency){
+        waitAndSelectFromDropDownMenu(currencyDropDownMenu , wait , Constants.SELECT_BY_VISIBLE_TEXT , currency);
+    }
+    public String getCurrentCurrency(){
+        return waitAndGetTheSelectedOptionFromDropDownMenu(currencyDropDownMenu , wait) ;
     }
 
 }

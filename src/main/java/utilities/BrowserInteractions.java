@@ -4,7 +4,9 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 
 public class BrowserInteractions {
@@ -52,4 +54,34 @@ public class BrowserInteractions {
             return false;
         }
     }
+    public static void waitAndSelectFromDropDownMenu(WebElement webElement , WebDriverWait wait, int type, Object selection){
+        try {
+            waitAndFindIfWebElementIsVisible(webElement , wait) ;
+            Select select = new Select(webElement) ;
+            if ( type == Constants.SELECT_BY_VALUE){
+                select.selectByValue((String)selection);
+            }
+            else if ( type == Constants.SELECT_BY_INDEX){
+                select.selectByIndex((Integer) selection);
+            }
+            else if ( type == Constants.SELECT_BY_VISIBLE_TEXT){
+                select.selectByVisibleText((String)selection);
+            }
+        }
+        catch (Exception e ){
+            printException( e , new Object(){}.getClass().getEnclosingMethod().getName());
+        }
+    }
+    public static String waitAndGetTheSelectedOptionFromDropDownMenu(WebElement webElement , WebDriverWait wait){
+        try {
+            waitAndFindIfWebElementIsVisible(webElement , wait) ;
+            Select select = new Select(webElement) ;
+            return select.getFirstSelectedOption().getText() ;
+        }
+        catch (Exception e){
+            printException(e , new Object(){}.getClass().getEnclosingMethod().getName());
+            return null;
+        }
+    }
+
 }

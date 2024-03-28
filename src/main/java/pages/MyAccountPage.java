@@ -29,13 +29,13 @@ public class MyAccountPage extends BasePage{
     @FindBy ( xpath = "//div[@id ='bar-notification']//span")
     WebElement notificationBarCloseButton ;
     public void openChangePasswordPage(){
-        waitAndClickOnWebElement(changePasswordLink , wait);
+        waitAndClickOnWebElement(changePasswordLink , wait , driver);
     }
     public void changePassword(String oldPassword, String newPassword){
         waitClearAndEnterTextInTextField(oldPasswordTextBox , wait , oldPassword);
         waitClearAndEnterTextInTextField(newPasswordTextBox, wait , newPassword);
         waitClearAndEnterTextInTextField(confirmNewPasswordTextBox , wait , newPassword);
-        waitAndClickOnWebElement(changePasswordButton , wait);
+        waitAndClickOnWebElement(changePasswordButton , wait, driver);
     }
     public boolean isPasswordChangedSuccessfully(){
         String message = waitAndGetTextFromWebElement(notificationBarLabel , wait) ;
@@ -45,6 +45,6 @@ public class MyAccountPage extends BasePage{
         return message.equals("Password was changed");
     }
     public void closeNotificationBarCloseButton(){
-        waitAndClickOnWebElement(notificationBarCloseButton , wait );
+        waitAndClickOnWebElement(notificationBarCloseButton , wait , driver );
     }
 }

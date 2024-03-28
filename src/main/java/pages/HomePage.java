@@ -31,34 +31,33 @@ public class HomePage extends BasePage{
     WebElement contactUsLink ;
 
     public void openRegistrationPage(){
-        waitAndClickOnWebElement(registerLink , wait);
+        waitAndClickOnWebElement(registerLink , wait , driver);
     }
     public void openLogInPage(){
-        waitAndClickOnWebElement(logInLink, wait);
+        waitAndClickOnWebElement(logInLink, wait, driver);
     }
     public void logOut() {
-        waitAndClickOnWebElement(logOutLink , wait);
+        waitAndClickOnWebElement(logOutLink , wait , driver);
     }
     public boolean isUserLoggedIn(){
         return waitAndFindIfWebElementIsVisible(logOutLink , wait) ;
     }
     public void openMyAccountPage(){
-        waitAndClickOnWebElement(myAccountLink , wait);
+        waitAndClickOnWebElement(myAccountLink , wait , driver);
     }
     public boolean isUserLoggedOut(){
         return waitAndFindIfWebElementIsVisible(registerLink , wait);
     }
     public void searchForProduct(String product){
         waitClearAndEnterTextInTextField(searchTextBox , wait , product);
-        waitAndClickOnWebElement(searchButton , wait);
+        waitAndClickOnWebElement(searchButton , wait , driver);
     }
     public void selectSearchAutoCompleteResult(String searchText){
         waitClearAndEnterTextInTextField(searchTextBox, wait , searchText);
-        waitAndClickOnWebElement(autoCompleteSearchResults.get(0) , wait);
+        waitAndClickOnWebElement(autoCompleteSearchResults.get(0) , wait , driver);
     }
     public void openContactUsPage(){
-        scrollToBottom();
-        waitAndClickOnWebElement(contactUsLink , wait);
+        waitAndClickOnWebElement(contactUsLink , wait , driver);
     }
 
 }

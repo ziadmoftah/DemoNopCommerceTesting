@@ -22,7 +22,7 @@ public class LogInPage extends BasePage{
     public void userLogIn(String email , String password){
         waitClearAndEnterTextInTextField(emailTextBox , wait , email);
         waitClearAndEnterTextInTextField(passwordTextBox ,wait , password);
-        waitAndClickOnWebElement(logInBtn , wait);
+        waitAndClickOnWebElement(logInBtn , wait , driver);
     }
 
 }

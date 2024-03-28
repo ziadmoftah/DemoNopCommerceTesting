@@ -13,6 +13,6 @@ public class SearchProductResultsPage extends BasePage{
     @FindBy(xpath = "//h2[ @class = 'product-title']//a[1]")
     WebElement productLink ;
     public void openProductDetails(){
-        waitAndClickOnWebElement(productLink , wait );
+        waitAndClickOnWebElement(productLink , wait , driver );
     }
 }

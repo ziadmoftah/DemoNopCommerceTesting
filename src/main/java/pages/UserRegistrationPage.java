@@ -37,7 +37,7 @@ public class UserRegistrationPage extends BasePage{
         waitClearAndEnterTextInTextField(emailTextBox , wait , email);
         waitClearAndEnterTextInTextField(passwordTextBox , wait , password);
         waitClearAndEnterTextInTextField(confirmPasswordTextBox , wait , password);
-        waitAndClickOnWebElement(registerBtn , wait);
+        waitAndClickOnWebElement(registerBtn , wait , driver);
     }
     public boolean isUserRegisteredSuccessfully(){
         String message = waitAndGetTextFromWebElement(successMessage , wait) ;

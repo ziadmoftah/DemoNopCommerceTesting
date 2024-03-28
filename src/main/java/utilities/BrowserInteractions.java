@@ -1,5 +1,7 @@
 package utilities;
 
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -10,8 +12,9 @@ public class BrowserInteractions {
         System.out.println( "Exception while " + methodName + " Method :" + e.getMessage());
         e.printStackTrace();
     }
-    public static void waitAndClickOnWebElement(WebElement webElement , WebDriverWait wait){
+    public static void waitAndClickOnWebElement(WebElement webElement , WebDriverWait wait , WebDriver driver){
         try {
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", webElement);
             wait.until(ExpectedConditions.elementToBeClickable(webElement));
             webElement.click();
         }

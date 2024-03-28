@@ -24,7 +24,7 @@ public class ContactUsPage extends BasePage{
         waitClearAndEnterTextInTextField(fullNameTextField , wait , fullName);
         waitClearAndEnterTextInTextField(emailTextField , wait , email);
         waitClearAndEnterTextInTextField(enquiryTextArea , wait , enquiry);
-        waitAndClickOnWebElement(submitButton , wait);
+        waitAndClickOnWebElement(submitButton , wait , driver);
 
     }
     public boolean isEnquirySuccessfullySent(){

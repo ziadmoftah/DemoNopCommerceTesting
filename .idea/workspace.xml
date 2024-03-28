@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9efc3e7-ef6b-4988-943b-2308c0e82933" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/utilities/Constants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/ChangeCurrencyTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utilities/BrowserInteractions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utilities/BrowserInteractions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/ProductDetailsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/ProductDetailsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/SearchProductTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/SearchProductTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/SearchProductsByAutoComplete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/SearchProductsByAutoComplete.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +43,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.ChangeCurrencyTest">
+  <component name="RunManager" selected="TestNG.SearchProductTest">
     <configuration name="ChangeCurrencyTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="NopCommerceTesting" />
       <extension name="coverage">
@@ -134,11 +132,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.SearchProductTest" />
+        <item itemvalue="TestNG.SearchProductsByAutoComplete" />
         <item itemvalue="TestNG.ChangeCurrencyTest" />
         <item itemvalue="TestNG.ChangeCurrencyTest.UserCanChangeCurrencySuccessfully" />
         <item itemvalue="TestNG.ContactUsTest" />
-        <item itemvalue="TestNG.SearchProductTest" />
-        <item itemvalue="TestNG.SearchProductsByAutoComplete" />
       </list>
     </recent_temporary>
   </component>
@@ -291,7 +289,14 @@
       <option name="project" value="LOCAL" />
       <updated>1711625286068</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Create ChangeCurrencyTest and Create its dependent Classes">
+      <created>1711632712060</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1711632712060</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -325,6 +330,7 @@
     <MESSAGE value="Refactor MyAccountPage and SearchProductResultsPage using BrowserInteractions class" />
     <MESSAGE value="Modify waitAndClickOnWebElement method to scroll to view of element then refactored all the dependent classes" />
     <MESSAGE value="Modify waitAndClickOnWebElement method to scroll to view of element first then refactored all the dependent classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modify waitAndClickOnWebElement method to scroll to view of element first then refactored all the dependent classes" />
+    <MESSAGE value="Create ChangeCurrencyTest and Create its dependent Classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create ChangeCurrencyTest and Create its dependent Classes" />
   </component>
 </project>

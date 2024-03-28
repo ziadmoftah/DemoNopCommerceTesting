@@ -18,6 +18,6 @@ public class SearchProductTest extends BaseTest{
         searchProductResultsPage=new SearchProductResultsPage(driver);
         searchProductResultsPage.openProductDetails();
         productDetailsPage= new ProductDetailsPage(driver);
-        Assert.assertTrue(productDetailsPage.getProductName().getText().equalsIgnoreCase(productName));
+        Assert.assertTrue(productDetailsPage.getProductName().equalsIgnoreCase(productName));
     }
 }

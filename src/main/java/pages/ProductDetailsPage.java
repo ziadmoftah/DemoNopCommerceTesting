@@ -13,8 +13,8 @@ public class ProductDetailsPage extends BasePage{
     WebElement productName ;
     @FindBy(id = "price-value-4")
     WebElement productPrice ;
-    public WebElement getProductName() {
-        return productName;
+    public String getProductName() {
+        return waitAndGetTextFromWebElement(productName , wait);
     }
     public String getProductPrice(){
         return waitAndGetTextFromWebElement(productPrice , wait) ;

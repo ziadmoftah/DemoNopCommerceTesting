@@ -15,6 +15,6 @@ public class SearchProductsByAutoComplete extends BaseTest{
         homePage = new HomePage(driver) ;
         homePage.selectSearchAutoCompleteResult("mac");
         productDetailsPage = new ProductDetailsPage(driver) ;
-        Assert.assertTrue(productDetailsPage.getProductName().getText().equalsIgnoreCase(productName));
+        Assert.assertTrue(productDetailsPage.getProductName().equalsIgnoreCase(productName));
     }
 }

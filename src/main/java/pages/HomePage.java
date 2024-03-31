@@ -33,6 +33,10 @@ public class HomePage extends BasePage{
     WebElement contactUsLink ;
     @FindBy(id = "customerCurrency")
     public WebElement currencyDropDownMenu ;
+    @FindBy(xpath = "//ul[@class = 'top-menu notmobile']//a[text() = 'Computers ']")
+    public WebElement computerHeaderMenu ;
+    @FindBy( xpath = "//ul[@class = 'top-menu notmobile']//a[@href = '/desktops']")
+    public WebElement desktopsSubHeaderComputerMenu ;
     public void openRegistrationPage(){
         waitAndClickOnWebElement(registerLink , wait , driver);
     }
@@ -69,5 +73,8 @@ public class HomePage extends BasePage{
     public String getCurrentCurrency(){
         return waitAndGetTheSelectedOptionFromDropDownMenu(currencyDropDownMenu , wait) ;
     }
-
+    public void openDesktopsPage(){
+        waitAndHoverOverWebElement(computerHeaderMenu , wait , driver);
+        waitAndClickOnWebElement(desktopsSubHeaderComputerMenu , wait , driver);
+    }
 }

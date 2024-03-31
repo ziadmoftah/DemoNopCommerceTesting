@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9efc3e7-ef6b-4988-943b-2308c0e82933" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/ProductDetailsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/ProductDetailsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/SearchProductTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/SearchProductTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/SearchProductsByAutoComplete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/SearchProductsByAutoComplete.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/ProductHoverMenuTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utilities/BrowserInteractions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utilities/BrowserInteractions.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +44,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.SearchProductTest">
+  <component name="RunManager" selected="TestNG.ProductHoverMenuTest.userCanSelectSubCategoryFromMainMenu">
     <configuration name="ChangeCurrencyTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="NopCommerceTesting" />
       <extension name="coverage">
@@ -79,7 +80,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ContactUsTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ProductHoverMenuTest.userCanSelectSubCategoryFromMainMenu" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="NopCommerceTesting" />
       <extension name="coverage">
         <pattern>
@@ -88,8 +89,9 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.ContactUsTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="MAIN_CLASS_NAME" value="tests.ProductHoverMenuTest" />
+      <option name="METHOD_NAME" value="userCanSelectSubCategoryFromMainMenu" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -132,11 +134,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.ProductHoverMenuTest.userCanSelectSubCategoryFromMainMenu" />
         <item itemvalue="TestNG.SearchProductTest" />
         <item itemvalue="TestNG.SearchProductsByAutoComplete" />
         <item itemvalue="TestNG.ChangeCurrencyTest" />
         <item itemvalue="TestNG.ChangeCurrencyTest.UserCanChangeCurrencySuccessfully" />
-        <item itemvalue="TestNG.ContactUsTest" />
       </list>
     </recent_temporary>
   </component>
@@ -296,7 +298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1711632712060</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Refactor ProductDetailsPage using BrowserInteraction class">
+      <created>1711632894086</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1711632894086</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -331,6 +340,7 @@
     <MESSAGE value="Modify waitAndClickOnWebElement method to scroll to view of element then refactored all the dependent classes" />
     <MESSAGE value="Modify waitAndClickOnWebElement method to scroll to view of element first then refactored all the dependent classes" />
     <MESSAGE value="Create ChangeCurrencyTest and Create its dependent Classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create ChangeCurrencyTest and Create its dependent Classes" />
+    <MESSAGE value="Refactor ProductDetailsPage using BrowserInteraction class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor ProductDetailsPage using BrowserInteraction class" />
   </component>
 </project>

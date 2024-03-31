@@ -3,6 +3,7 @@ package utilities;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -81,6 +82,16 @@ public class BrowserInteractions {
         catch (Exception e){
             printException(e , new Object(){}.getClass().getEnclosingMethod().getName());
             return null;
+        }
+    }
+    public static void waitAndHoverOverWebElement(WebElement webElement , WebDriverWait wait , WebDriver webDriver){
+        try{
+            waitAndFindIfWebElementIsVisible(webElement , wait) ;
+            Actions action = new Actions(webDriver) ;
+            action.moveToElement(webElement).perform();
+        }
+        catch (Exception e){
+            printException(e , new Object(){}.getClass().getEnclosingMethod().getName());
         }
     }
 
